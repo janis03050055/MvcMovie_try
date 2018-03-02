@@ -25,6 +25,7 @@ namespace MvcMovie
         {
             services.AddMvc();
 
+            //它會在以方法語法所表示的 LINQ 查詢中大量使用。
             services.AddDbContext<MvcMovieContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("MvcMovieContext")));
         }
